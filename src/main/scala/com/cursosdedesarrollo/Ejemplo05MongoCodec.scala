@@ -2,9 +2,9 @@ package com.cursosdedesarrollo
 
 import org.bson.codecs.configuration.CodecRegistries.{fromProviders, fromRegistries}
 import org.mongodb.scala.bson.ObjectId
-import org.mongodb.scala.bson.codecs.DEFAULT_CODEC_REGISTRY
+//import org.mongodb.scala.bson.codecs.DEFAULT_CODEC_REGISTRY
 import org.mongodb.scala.bson.codecs.Macros._
-import org.mongodb.scala.{Completed, MongoClient, MongoCollection, MongoDatabase, Observer}
+import org.mongodb.scala.{MongoClient, MongoCollection, MongoDatabase, Observer}
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -18,6 +18,7 @@ case class Person(_id: ObjectId, firstName: String, lastName: String)
 
 object Ejemplo05MongoCodec {
   def main(args: Array[String]): Unit = {
+    /*
     val codecRegistry = fromRegistries(fromProviders(classOf[Person]), DEFAULT_CODEC_REGISTRY)
     // Create the client
     val mongoClient: MongoClient = if (args.isEmpty) MongoClient() else MongoClient(args.head)
@@ -57,6 +58,8 @@ object Ejemplo05MongoCodec {
       override def onComplete(): Unit = println("Borrado completado")
       Thread.sleep(1000)
     })
+
+     */
     Thread.sleep(1000)
   }
 
