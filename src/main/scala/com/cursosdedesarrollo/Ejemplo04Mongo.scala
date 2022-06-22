@@ -1,5 +1,5 @@
 package com.cursosdedesarrollo
-import org.mongodb.scala.{BulkWriteResult, Document, MongoClient, MongoCollection, MongoDatabase, Observable, Observer}
+import org.mongodb.scala.{BulkWriteResult,  Document, MongoClient, MongoCollection, MongoDatabase, Observable, Observer}
 //filtros como equal
 import org.mongodb.scala.model.Filters._
 // tipos de ordenación
@@ -20,7 +20,7 @@ object Ejemplo04Mongo{
   def main(args: Array[String]): Unit = {
 
     // Conectando a la BBDD
-    val client: MongoClient = MongoClient()
+    val client: MongoClient = MongoClient("mongodb://localhost:27017/test")
 
     //Obteniendo el listado de BBDD
     val databases=client.listDatabaseNames()
