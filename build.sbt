@@ -9,3 +9,6 @@ lazy val root = (project in file("."))
 
 libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.29"
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "4.4.1"
+libraryDependencies ++= Seq(
+  "org.reactivemongo" %% "reactivemongo" % "1.0.10"
+)
